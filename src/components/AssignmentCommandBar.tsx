@@ -7,7 +7,7 @@ import {
   SUBJECTS,
   TIME_SLOTS,
 } from '../data/initialData';
-import { ScheduleMatrix } from '../types';
+import { ScheduleMatrix, SchoolProfile } from '../types';
 import { AssignmentCommand, executeAssignmentCommand } from '../solver/cspSolver';
 import {
   SlidersHorizontal,
@@ -22,42 +22,51 @@ import {
   ChevronUp,
   Clock,
   BookOpen,
+  School,
+  Settings,
+  Users,
 } from 'lucide-react';
 
 interface AssignmentCommandBarProps {
   schedule: ScheduleMatrix;
   onApplyCommand: (newSchedule: ScheduleMatrix, description: string) => void;
   onResetStandard: () => void;
+  currentSchool?: SchoolProfile;
+  onOpenSchoolManager?: () => void;
+  onOpenConstraintsManager?: () => void;
 }
 
 export function AssignmentCommandBar({
   schedule,
   onApplyCommand,
   onResetStandard,
+  currentSchool,
+  onOpenSchoolManager,
+  onOpenConstraintsManager,
 }: AssignmentCommandBarProps) {
+  const classes = currentSchool?.classes || ALL_CLASSES;
+  const teachers = currentSchool?.teachers || ALL_TEACHERS;
+
   const [isExpanded, setIsExpanded] = useState<boolean>(true);
-  const [selectedClass, setSelectedClass] = useState<string>('1A');
+  const [selectedClass, setSelectedClass] = useState<string>(classes[0]?.id || '1A');
   const [selectedSubject, setSelectedSubject] = useState<string>('TC_TOAN');
-  const [selectedTeacher, setSelectedTeacher] = useState<string>('Chi');
+  const [selectedTeacher, setSelectedTeacher] = useState<string>(teachers[0]?.name || 'Chi');
   const [targetPeriods, setTargetPeriods] = useState<number>(2);
   const [selectedSlotId, setSelectedSlotId] = useState<string>('');
   const [notes, setNotes] = useState<string>('');
 
-  // All teachers list
-  const allTeachers = ALL_TEACHERS;
-
   // Selected teacher info & target quota
   const selectedTeacherInfo = React.useMemo(() => {
-    return ALL_TEACHERS.find(t => t.name === selectedTeacher);
-  }, [selectedTeacher]);
+    return teachers.find(t => t.name === selectedTeacher);
+  }, [selectedTeacher, teachers]);
 
-  const targetQuota = selectedTeacherInfo?.targetPeriods ?? 19;
+  const targetQuota = selectedTeacherInfo?.quota ?? selectedTeacherInfo?.targetPeriods ?? 19;
 
   // Calculate current workload of selected teacher
   const currentWorkload = React.useMemo(() => {
     let count = 0;
     let inClassCount = 0;
-    for (const c of ALL_CLASSES) {
+    for (const c of classes) {
       for (const s of TIME_SLOTS) {
         const l = schedule[c.id]?.[s.id];
         if (l?.teacherName === selectedTeacher) {
@@ -69,12 +78,13 @@ export function AssignmentCommandBar({
       }
     }
     return { total: count, inClass: inClassCount };
-  }, [schedule, selectedTeacher, selectedClass]);
+  }, [schedule, selectedTeacher, selectedClass, classes]);
 
   // Handle when class changes, automatically set default GVCN
   const handleClassChange = (newClass: string) => {
     setSelectedClass(newClass);
-    const gvcn = GVCN_MAP[newClass];
+    const cls = classes.find(c => c.id === newClass);
+    const gvcn = cls?.gvcn || GVCN_MAP[newClass];
     if (gvcn) {
       setSelectedTeacher(gvcn);
     }
@@ -158,7 +168,31 @@ export function AssignmentCommandBar({
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center flex-wrap gap-2">
+          {onOpenSchoolManager && (
+            <button
+              type="button"
+              onClick={onOpenSchoolManager}
+              className="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-xs transition-colors cursor-pointer"
+              title="Mở thanh lệnh đổi trường, danh sách GV và phân tiết trường khác"
+            >
+              <Users className="w-3.5 h-3.5" />
+              <span>Đổi Trường & DS GV</span>
+            </button>
+          )}
+
+          {onOpenConstraintsManager && (
+            <button
+              type="button"
+              onClick={onOpenConstraintsManager}
+              className="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-xs transition-colors cursor-pointer"
+              title="Mở nút lệnh cấu hình các nguyên tắc cứng và mềm"
+            >
+              <SlidersHorizontal className="w-3.5 h-3.5" />
+              <span>Nguyên Tắc Cứng / Mềm</span>
+            </button>
+          )}
+
           <button
             type="button"
             onClick={handleQuickStandardize}
@@ -166,7 +200,7 @@ export function AssignmentCommandBar({
             title="Khôi phục toàn trường về chuẩn 19 tiết GVCN & 2 buổi chiều nghỉ"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Cân đối chuẩn 19 tiết</span>
+            <span>Cân đối 19 tiết</span>
           </button>
 
           <button
@@ -189,8 +223,8 @@ export function AssignmentCommandBar({
                 17-19
               </div>
               <div className="min-w-0">
-                <div className="font-bold text-slate-800 truncate">Định mức GVCN theo chức vụ</div>
-                <div className="text-[11px] text-slate-500 truncate">Trang (TT) 17T • Bé Năm (TP) 18T • Khác 19T</div>
+                <div className="font-bold text-slate-800 truncate">Định mức GV theo phân công</div>
+                <div className="text-[11px] text-slate-500 truncate">{teachers.length} Giáo viên • {classes.length} Lớp</div>
               </div>
             </div>
 
@@ -210,7 +244,7 @@ export function AssignmentCommandBar({
               </div>
               <div className="min-w-0">
                 <div className="font-bold text-slate-800 truncate">HĐTN 3 tiết/tuần</div>
-                <div className="text-[11px] text-slate-500 truncate">Tiết 2 do GV tăng cường dạy</div>
+                <div className="text-[11px] text-slate-500 truncate">Chào cờ, Sinh hoạt lớp, Chủ đề</div>
               </div>
             </div>
 
@@ -237,9 +271,9 @@ export function AssignmentCommandBar({
                 onChange={e => handleClassChange(e.target.value)}
                 className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-2xs"
               >
-                {ALL_CLASSES.map(c => (
+                {classes.map(c => (
                   <option key={c.id} value={c.id}>
-                    Lớp {c.id} ({c.id.endsWith('A') ? 'Điểm 1' : 'Điểm 2'} - GVCN: {GVCN_MAP[c.id]})
+                    {c.name || `Lớp ${c.id}`} (GVCN: {c.gvcn || 'GVCN'})
                   </option>
                 ))}
               </select>
@@ -259,18 +293,18 @@ export function AssignmentCommandBar({
                   <option value="TC_TOAN">TC_TOAN - Tăng cường Toán (GVCN)</option>
                   <option value="TC_TV">TC_TV - Tăng cường Tiếng Việt (GVCN)</option>
                   <option value="HDTN_CD">HDTN_CD - HĐTN Chủ đề (GV Tăng cường/Bộ môn)</option>
-                  <option value="BD_TA">BD_TA - Bồi dưỡng Tiếng Anh (Nương)</option>
-                  <option value="BD_TH">BD_TH - Bồi dưỡng Tin học (Phương)</option>
-                  <option value="BD_TD">BD_TD - Bồi dưỡng TDTT / Thể chất (Thịnh)</option>
-                  <option value="BD_NT">BD_NT - Bồi dưỡng Nghệ thuật (Tâm/Thy)</option>
+                  <option value="BD_TA">BD_TA - Bồi dưỡng Tiếng Anh</option>
+                  <option value="BD_TH">BD_TH - Bồi dưỡng Tin học</option>
+                  <option value="BD_TD">BD_TD - Bồi dưỡng TDTT / Thể chất</option>
+                  <option value="BD_NT">BD_NT - Bồi dưỡng Nghệ thuật</option>
                   <option value="TC">TC - Kỹ năng sống / Tăng cường</option>
                 </optgroup>
                 <optgroup label="Môn chính khóa">
                   <option value="TOAN">TOAN - Toán học (1 tiết/ngày)</option>
                   <option value="TV">TV - Tiếng Việt</option>
-                  <option value="TA">TA - Tiếng Anh (Nương)</option>
-                  <option value="GDTC">GDTC - Giáo dục thể chất (Thịnh)</option>
-                  <option value="TH">TH - Tin học (Phương)</option>
+                  <option value="TA">TA - Tiếng Anh</option>
+                  <option value="GDTC">GDTC - Giáo dục thể chất</option>
+                  <option value="TH">TH - Tin học & Công nghệ</option>
                   <option value="AN">AN - Âm nhạc</option>
                   <option value="MT">MT - Mỹ thuật</option>
                   <option value="TNXH">TNXH - Tự nhiên và Xã hội</option>
@@ -292,16 +326,16 @@ export function AssignmentCommandBar({
                 className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-2xs"
               >
                 <optgroup label="GV Chủ nhiệm & Cán sự">
-                  {ALL_TEACHERS.filter(t => t.role === 'GVCN').map(t => (
+                  {teachers.filter(t => t.role === 'GVCN').map(t => (
                     <option key={t.id} value={t.name}>
-                      Cô/Thầy {t.name} ({t.roleTitle || t.assignedClass} • {t.targetPeriods || 19}T)
+                      {t.name} ({t.roleTitle || t.assignedClass} • {t.quota || 19}T)
                     </option>
                   ))}
                 </optgroup>
                 <optgroup label="GV Bộ môn & Tăng cường">
-                  {ALL_TEACHERS.filter(t => t.role !== 'GVCN').map(t => (
+                  {teachers.filter(t => t.role !== 'GVCN').map(t => (
                     <option key={t.id} value={t.name}>
-                      Cô/Thầy {t.name} ({t.subjects.join(', ')})
+                      {t.name} ({t.subjects?.join(', ') || 'Bộ môn'})
                     </option>
                   ))}
                 </optgroup>

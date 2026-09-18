@@ -12,14 +12,24 @@ import {
   Sparkles,
   Award,
 } from 'lucide-react';
-import { ConstraintViolation } from '../types';
+import { ConstraintConfig, ConstraintViolation, SchoolProfile } from '../types';
+import { SlidersHorizontal, Settings } from 'lucide-react';
 
 interface ConstraintAuditorProps {
   violations: ConstraintViolation[];
   onFocusViolation?: (violation: ConstraintViolation) => void;
+  constraints?: ConstraintConfig;
+  onOpenConstraintsManager?: () => void;
+  schoolProfile?: SchoolProfile;
 }
 
-export const ConstraintAuditor: React.FC<ConstraintAuditorProps> = ({ violations, onFocusViolation }) => {
+export const ConstraintAuditor: React.FC<ConstraintAuditorProps> = ({
+  violations,
+  onFocusViolation,
+  constraints,
+  onOpenConstraintsManager,
+  schoolProfile,
+}) => {
   const hardViolations = violations.filter(v => v.type === 'HARD');
   const softViolations = violations.filter(v => v.type === 'SOFT');
   const isPerfect = violations.length === 0;
@@ -27,45 +37,67 @@ export const ConstraintAuditor: React.FC<ConstraintAuditorProps> = ({ violations
   const constraintRules = [
     {
       id: 'MASTER_BLUEPRINT_SYNC',
-      title: 'Đồng bộ 100% TKB Mẫu mới tải lên',
-      desc: 'Toàn bộ 320 tiết học được phân bổ chính xác theo thời khóa biểu mẫu chính thức (Tuần 1: 07-11/9/2026).',
+      title: 'Đồng bộ 100% Phân bổ Chuẩn',
+      desc: 'Toàn bộ các tiết học được phân bổ chính xác theo thời khóa biểu mẫu và ma trận phân công của trường.',
       icon: <Award className="w-4 h-4 text-blue-600" />,
+      active: true,
       hasViolation: violations.some(v => v.code === 'MISSING_SLOTS'),
     },
     {
       id: 'PHT_QUAN_POLICY',
-      title: 'PHT Quan dạy đúng 2 tiết Đạo đức Khối 5',
-      desc: 'Thầy Phan Ngọc Quan (Phó Hiệu trưởng) chỉ dạy 2 tiết Đạo đức tại 5A (T2_C_1) và 5B (T2_C_3).',
+      title: 'PHT Quan dạy đúng 2 tiết Đạo đức',
+      desc: 'Thầy Phan Ngọc Quan (Phó Hiệu trưởng) chỉ dạy 2 tiết Đạo đức khối 5 (5A và 5B).',
       icon: <CheckCircle2 className="w-4 h-4 text-emerald-600" />,
+      active: constraints ? constraints.hard.quanMoralOnly : true,
       hasViolation: violations.some(v => v.code === 'QUAN_POLICY_VIOLATION' || v.code === 'QUAN_INVALID_ASSIGNMENT'),
     },
     {
       id: 'TEACHER_COLLISION',
       title: 'Không trùng giờ, trùng lớp',
-      desc: 'Mỗi lớp tại 1 tiết chỉ có đúng 1 GV; 1 GV tại 1 thời điểm chỉ dạy tối đa 1 lớp (0 xung đột).',
+      desc: 'Mỗi lớp tại 1 tiết chỉ có đúng 1 GV; 1 GV tại 1 thời điểm chỉ dạy tối đa 1 lớp (0 xung đột giáo viên).',
       icon: <Clock className="w-4 h-4 text-emerald-600" />,
+      active: constraints ? constraints.hard.noTeacherCollision : true,
       hasViolation: violations.some(v => v.code === 'TEACHER_COLLISION'),
     },
     {
-      id: 'OFFICIAL_QUOTAS',
-      title: 'Định mức phân công chuyên môn',
-      desc: 'Phân công đúng số tiết của giáo viên: Trang (16T), Bé Năm (19T), Huế (20T), các GV khác theo đúng TKB mẫu.',
+      id: 'NO_CLASS_COLLISION',
+      title: 'Không trùng tiết của lớp',
+      desc: 'Mỗi lớp tại một tiết thời khóa biểu chỉ học đúng 1 môn duy nhất.',
       icon: <ShieldCheck className="w-4 h-4 text-indigo-600" />,
-      hasViolation: false,
+      active: constraints ? constraints.hard.noClassCollision : true,
+      hasViolation: violations.some(v => v.code === 'CLASS_COLLISION'),
+    },
+    {
+      id: 'OFFICIAL_QUOTAS',
+      title: 'Tuân thủ định mức tiết dạy',
+      desc: 'Phân công đúng định mức tiết dạy của giáo viên theo bảng phân tiết.',
+      icon: <ShieldCheck className="w-4 h-4 text-indigo-600" />,
+      active: constraints ? constraints.soft.respectTeacherQuota : true,
+      hasViolation: violations.some(v => v.code === 'QUOTA_EXCEEDED'),
+    },
+    {
+      id: 'AFTERNOONS_OFF',
+      title: 'Nghỉ 2 buổi chiều (Thứ 2 - Thứ 5)',
+      desc: 'Học sinh tiểu học được bố trí nghỉ 2 buổi chiều trong tuần để đảm bảo thời lượng GDPT 2018.',
+      icon: <Coffee className="w-4 h-4 text-amber-600" />,
+      active: constraints ? constraints.soft.twoAfternoonsOff : true,
+      hasViolation: violations.some(v => v.code === 'AFTERNOON_OFF_VIOLATION'),
     },
     {
       id: 'CAMPUS_SEGREGATION',
-      title: 'Hai Điểm trường (Điểm 1 & Điểm 2)',
-      desc: 'Khối A học tại Điểm 1 (Trường chính), Khối B học tại Điểm 2 (Phân hiệu Tân Bình).',
+      title: 'Phân định điểm trường',
+      desc: 'Học sinh học đúng điểm trường cơ sở chính hoặc phân hiệu, giảm di chuyển giáo viên trong buổi.',
       icon: <MapPin className="w-4 h-4 text-rose-600" />,
-      hasViolation: false,
+      active: constraints ? constraints.hard.campusSegregation : true,
+      hasViolation: violations.some(v => v.code === 'CAMPUS_VIOLATION'),
     },
     {
       id: 'FRIDAY_AFTERNOON_OFF',
-      title: 'Thứ 6 Chiều nghỉ toàn trường',
-      desc: 'Chiều Thứ 6 toàn trường nghỉ theo quy định sinh hoạt chuyên môn của Tiểu học Tân Thạnh.',
-      icon: <Coffee className="w-4 h-4 text-amber-600" />,
-      hasViolation: false,
+      title: 'Chiều Thứ 6 sinh hoạt chuyên môn',
+      desc: 'Chiều Thứ 6 toàn trường nghỉ để tổ chức sinh hoạt chuyên môn, họp hội đồng sư phạm.',
+      icon: <Coffee className="w-4 h-4 text-purple-600" />,
+      active: constraints ? constraints.hard.fridayAfternoonOff : true,
+      hasViolation: violations.some(v => v.code === 'FRIDAY_AFTERNOON_VIOLATION'),
     },
   ];
 
@@ -89,7 +121,16 @@ export const ConstraintAuditor: React.FC<ConstraintAuditorProps> = ({ violations
           </div>
         </div>
 
-        <div className="flex items-center gap-4 text-xs font-medium">
+        <div className="flex items-center gap-2 flex-wrap text-xs font-medium">
+          {onOpenConstraintsManager && (
+            <button
+              onClick={onOpenConstraintsManager}
+              className="flex items-center gap-1.5 text-purple-700 bg-purple-50 hover:bg-purple-100 px-3 py-1.5 rounded-lg border border-purple-200 transition-colors font-semibold"
+            >
+              <SlidersHorizontal className="w-3.5 h-3.5" />
+              <span>Cấu hình Nguyên Tắc</span>
+            </button>
+          )}
           <div className="flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-md border border-emerald-100">
             <CheckCircle2 className="w-4 h-4" />
             <span>Ràng buộc cứng: <strong>{hardViolations.length === 0 ? 'Thỏa mãn 100%' : `${hardViolations.length} Lỗi`}</strong></span>

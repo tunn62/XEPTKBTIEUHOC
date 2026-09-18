@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import { ALL_CLASSES, SCHOOL_INFO, TIME_SLOTS } from '../data/initialData';
-import { ScheduledLesson, ScheduleMatrix } from '../types';
+import { ScheduledLesson, ScheduleMatrix, SchoolProfile } from '../types';
 import { Printer, GraduationCap, MapPin, User, BookOpen, Clock } from 'lucide-react';
 
 interface ClassScheduleViewProps {
   schedule: ScheduleMatrix;
   onSelectSlot: (classId: string, slotId: string, lesson?: ScheduledLesson) => void;
+  schoolProfile?: SchoolProfile;
 }
 
-export const ClassScheduleView: React.FC<ClassScheduleViewProps> = ({ schedule, onSelectSlot }) => {
-  const [selectedClassId, setSelectedClassId] = useState<string>('3A');
+export const ClassScheduleView: React.FC<ClassScheduleViewProps> = ({
+  schedule,
+  onSelectSlot,
+  schoolProfile,
+}) => {
+  const classes = schoolProfile?.classes || ALL_CLASSES;
+  const [selectedClassId, setSelectedClassId] = useState<string>(classes[0]?.id || '1A');
 
-  const selectedClass = ALL_CLASSES.find(c => c.id === selectedClassId) || ALL_CLASSES[0];
-  const isDiem1 = selectedClass.campus === 'diem1';
+  const selectedClass = classes.find(c => c.id === selectedClassId) || classes[0];
+  const isDiem1 = selectedClass.campus === 'diem1' || selectedClass.id.endsWith('A');
 
   const days = [2, 3, 4, 5, 6];
   const dayNames: Record<number, string> = {
@@ -53,7 +59,7 @@ export const ClassScheduleView: React.FC<ClassScheduleViewProps> = ({ schedule, 
         </div>
 
         <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
-          {ALL_CLASSES.map((c) => {
+          {classes.map((c) => {
             const isSelected = c.id === selectedClassId;
             const isD1 = c.campus === 'diem1';
             return (

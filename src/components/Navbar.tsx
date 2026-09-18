@@ -1,5 +1,6 @@
 import React from 'react';
 import { SCHOOL_INFO } from '../data/initialData';
+import { SchoolProfile } from '../types';
 import {
   Calendar,
   Sparkles,
@@ -11,6 +12,8 @@ import {
   GraduationCap,
   Users,
   ShieldCheck,
+  SlidersHorizontal,
+  Settings,
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -19,8 +22,11 @@ interface NavbarProps {
   onSolveAgain: () => void;
   onExportExcel: () => void;
   onOpenStats: () => void;
+  onOpenSchoolManager?: () => void;
+  onOpenConstraintsManager?: () => void;
   isSolving: boolean;
   violationsCount: number;
+  schoolProfile?: SchoolProfile;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -29,9 +35,17 @@ export const Navbar: React.FC<NavbarProps> = ({
   onSolveAgain,
   onExportExcel,
   onOpenStats,
+  onOpenSchoolManager,
+  onOpenConstraintsManager,
   isSolving,
   violationsCount,
+  schoolProfile,
 }) => {
+  const currentSchoolName = schoolProfile?.name || SCHOOL_INFO.name;
+  const currentBranch = schoolProfile?.branch || SCHOOL_INFO.branch;
+  const currentYear = schoolProfile?.academicYear || SCHOOL_INFO.academicYear;
+  const classesCount = schoolProfile?.classes?.length || 10;
+
   return (
     <header className="bg-white border-b border-slate-200/90 sticky top-0 z-40 shadow-2xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,17 +59,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div>
               <div className="flex items-center gap-2 flex-wrap">
                 <h1 className="text-base font-extrabold text-slate-900 tracking-tight leading-none">
-                  {SCHOOL_INFO.name}
+                  {currentSchoolName}
                 </h1>
                 <span className="text-xs px-2 py-0.5 rounded-md font-bold bg-rose-100 text-rose-800">
-                  {SCHOOL_INFO.branch}
+                  {currentBranch}
                 </span>
                 <span className="text-xs px-2 py-0.5 rounded-md font-bold bg-blue-50 text-blue-800 border border-blue-200">
-                  Năm học {SCHOOL_INFO.academicYear}
+                  Năm học {currentYear}
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 mt-1 font-medium flex items-center gap-1.5">
-                <span>{SCHOOL_INFO.technology}</span>
+                <span>{classesCount} Lớp học • Phân tiết GDPT 2018</span>
                 <span>•</span>
                 <span className="text-emerald-700 font-semibold flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5" />
@@ -67,6 +81,28 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Action buttons */}
           <div className="flex items-center flex-wrap gap-2">
+            {/* School & Teachers Command Button */}
+            <button
+              id="btn-open-school-manager"
+              onClick={onOpenSchoolManager}
+              className="px-3 py-2 rounded-lg border border-indigo-200 bg-indigo-50/80 hover:bg-indigo-100 text-indigo-900 text-xs font-bold flex items-center gap-1.5 shadow-2xs transition-all"
+              title="Đổi trường học khác, thay đổi danh sách giáo viên và phân tiết giảng dạy"
+            >
+              <Users className="w-4 h-4 text-indigo-600" />
+              <span>Đổi Trường & Phân Công GV</span>
+            </button>
+
+            {/* Hard & Soft Constraints Button */}
+            <button
+              id="btn-open-constraints-manager"
+              onClick={onOpenConstraintsManager}
+              className="px-3 py-2 rounded-lg border border-purple-200 bg-purple-50/80 hover:bg-purple-100 text-purple-900 text-xs font-bold flex items-center gap-1.5 shadow-2xs transition-all"
+              title="Cấu hình các nguyên tắc cứng (bắt buộc) và nguyên tắc mềm (sư phạm)"
+            >
+              <SlidersHorizontal className="w-4 h-4 text-purple-600" />
+              <span>Nguyên Tắc Cứng & Mềm</span>
+            </button>
+
             <button
               id="btn-csp-solve"
               onClick={onSolveAgain}
@@ -104,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               title="In bản thời khóa biểu trực tiếp"
             >
               <Printer className="w-4 h-4 text-slate-600" />
-              <span className="hidden sm:inline">In Thời Khóa Biểu</span>
+              <span className="hidden sm:inline">In TKB</span>
             </button>
           </div>
         </div>
@@ -122,7 +158,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               <Calendar className="w-3.5 h-3.5" />
-              <span>Toàn Trường (Ma Trận 10 Lớp)</span>
+              <span>Toàn Trường ({classesCount} Lớp)</span>
             </button>
 
             <button

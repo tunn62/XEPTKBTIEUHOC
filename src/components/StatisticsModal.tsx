@@ -1,24 +1,28 @@
 import React from 'react';
 import { ALL_CLASSES, ALL_TEACHERS, SCHOOL_INFO, TIME_SLOTS } from '../data/initialData';
 import { isDiem1 } from '../solver/cspSolver';
-import { ScheduleMatrix } from '../types';
+import { ScheduleMatrix, SchoolProfile } from '../types';
 import { X, BarChart3, Users, BookOpen, CheckCircle, TrendingUp, MapPin } from 'lucide-react';
 
 interface StatisticsModalProps {
   schedule: ScheduleMatrix;
   onClose: () => void;
+  schoolProfile?: SchoolProfile;
 }
 
-export const StatisticsModal: React.FC<StatisticsModalProps> = ({ schedule, onClose }) => {
+export const StatisticsModal: React.FC<StatisticsModalProps> = ({ schedule, onClose, schoolProfile }) => {
+  const teachers = schoolProfile?.teachers || ALL_TEACHERS;
+  const classes = schoolProfile?.classes || ALL_CLASSES;
+
   // Compute teacher loads
-  const teacherStats = ALL_TEACHERS.map((t) => {
+  const teacherStats = teachers.map((t) => {
     let total = 0;
     let diem1 = 0;
     let diem2 = 0;
     let morning = 0;
     let afternoon = 0;
 
-    for (const c of ALL_CLASSES) {
+    for (const c of classes) {
       for (const slot of TIME_SLOTS) {
         const lesson = schedule[c.id]?.[slot.id];
         if (lesson && lesson.teacherName === t.name) {

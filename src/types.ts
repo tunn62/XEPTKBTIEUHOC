@@ -100,3 +100,45 @@ export interface SpecialistPolicy {
   kiemNhiemHdtn: boolean; // Kiêm nhiệm dạy HĐTN tiết 2
   assignedClasses: string[];
 }
+
+export interface HardConstraintsConfig {
+  noTeacherCollision: boolean; // Không trùng giờ giáo viên (0 xung đột)
+  fixedMondayFlagSalute: boolean; // Tiết 1 Thứ Hai: Chào cờ (SHDC) do GVCN phụ trách
+  fixedFridayClassActivity: boolean; // Tiết 4 Thứ Sáu: Sinh hoạt lớp (SHL) do GVCN phụ trách
+  strictQuotaFulfilled: boolean; // Đảm bảo đủ 100% định mức số tiết/tuần (32 tiết/lớp)
+  fridayAfternoonOff: boolean; // Nghỉ sinh hoạt chuyên môn chiều Thứ 6 toàn trường
+  limitBghQuota: boolean; // Giới hạn tiết dạy BGH (Thầy Quan Phó Hiệu trưởng: đúng 2 tiết)
+  bghTeacherName?: string;
+  bghMaxPeriods?: number;
+  bghSubjectCode?: string;
+  bghGrades?: number[];
+  maxComputerRoomSimultaneous: number; // Giới hạn số lớp học Tin học đồng thời (số phòng máy)
+}
+
+export interface SoftConstraintsConfig {
+  prioritizeMorningCoreSubjects: boolean; // Toán & Tiếng Việt ưu tiên xếp buổi sáng (Tiết 1, 2, 3)
+  avoidNoonPE: boolean; // Thể dục (GDTC) tránh tiết trưa nắng nóng (Tiết 4 sáng, Tiết 3 chiều)
+  avoidMondayPeriod1PE: boolean; // Thể dục tránh xếp vào tiết đầu tuần sau Chào cờ
+  spreadSubjectsEvenly: boolean; // Rải đều các môn trong tuần (tránh dồn quá nhiều tiết khó 1 ngày)
+  minimizeTeacherGaps: boolean; // Hạn chế tiết trống (lủng tiết) trong buổi dạy của GV
+  maxPeriodsPerSessionPerTeacher: number; // Giới hạn số tiết tối đa trong 1 buổi của GV (mặc định 4)
+  allowDoublePeriodsForReading: boolean; // Ưu tiên xếp cặp 2 tiết liền cho phân môn Tập đọc (TV)
+  gvcnAfternoonOffAllowance: boolean; // GVCN được nghỉ ít nhất 1-2 buổi chiều trong tuần
+}
+
+export interface ConstraintConfig {
+  hard: HardConstraintsConfig;
+  soft: SoftConstraintsConfig;
+}
+
+export interface SchoolProfile {
+  id: string;
+  name: string;
+  branch: string;
+  academicYear: string;
+  standardPeriods: number; // Standard 32 periods
+  classes: SchoolClass[];
+  teachers: Teacher[];
+  assignments: SubjectAssignment[];
+}
+

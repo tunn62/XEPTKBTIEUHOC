@@ -1,28 +1,31 @@
 import React, { useState } from 'react';
 import { ALL_CLASSES, CLASSES_DIEM1, CLASSES_DIEM2, SUBJECTS, TIME_SLOTS } from '../data/initialData';
-import { ScheduledLesson, ScheduleMatrix } from '../types';
+import { ScheduledLesson, ScheduleMatrix, SchoolProfile } from '../types';
 import { Filter, Eye, Sparkles, Building2, School } from 'lucide-react';
 
 interface SchoolScheduleViewProps {
   schedule: ScheduleMatrix;
   onSelectSlot: (classId: string, slotId: string, lesson?: ScheduledLesson) => void;
   highlightedTeacher?: string | null;
+  schoolProfile?: SchoolProfile;
 }
 
 export const SchoolScheduleView: React.FC<SchoolScheduleViewProps> = ({
   schedule,
   onSelectSlot,
   highlightedTeacher,
+  schoolProfile,
 }) => {
   const [campusFilter, setCampusFilter] = useState<'all' | 'diem1' | 'diem2'>('all');
   const [selectedSubjectFilter, setSelectedSubjectFilter] = useState<string>('all');
 
+  const classes = schoolProfile?.classes || ALL_CLASSES;
   const visibleClasses =
     campusFilter === 'diem1'
-      ? CLASSES_DIEM1
+      ? classes.filter(c => c.campus === 'diem1' || c.id.endsWith('A'))
       : campusFilter === 'diem2'
-      ? CLASSES_DIEM2
-      : ALL_CLASSES;
+      ? classes.filter(c => c.campus === 'diem2' || c.id.endsWith('B'))
+      : classes;
 
   const days = [2, 3, 4, 5, 6];
 

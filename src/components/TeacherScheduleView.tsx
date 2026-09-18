@@ -1,22 +1,30 @@
 import React, { useState } from 'react';
 import { ALL_CLASSES, ALL_TEACHERS, SPECIALIST_TEACHERS, TIME_SLOTS } from '../data/initialData';
 import { isDiem1 } from '../solver/cspSolver';
-import { ScheduledLesson, ScheduleMatrix } from '../types';
+import { ScheduledLesson, ScheduleMatrix, SchoolProfile } from '../types';
 import { UserCheck, MapPin, Clock, ArrowRightLeft, ShieldCheck } from 'lucide-react';
 
 interface TeacherScheduleViewProps {
   schedule: ScheduleMatrix;
   onSelectSlot: (classId: string, slotId: string, lesson?: ScheduledLesson) => void;
+  schoolProfile?: SchoolProfile;
 }
 
-export const TeacherScheduleView: React.FC<TeacherScheduleViewProps> = ({ schedule, onSelectSlot }) => {
-  const [selectedTeacherId, setSelectedTeacherId] = useState<string>('Nương');
-  const [roleFilter, setRoleFilter] = useState<'all' | 'SPECIALIST' | 'GVCN'>('SPECIALIST');
+export const TeacherScheduleView: React.FC<TeacherScheduleViewProps> = ({
+  schedule,
+  onSelectSlot,
+  schoolProfile,
+}) => {
+  const teachers = schoolProfile?.teachers || ALL_TEACHERS;
+  const classes = schoolProfile?.classes || ALL_CLASSES;
 
-  const selectedTeacher = ALL_TEACHERS.find(t => t.id === selectedTeacherId) || ALL_TEACHERS[0];
+  const [selectedTeacherId, setSelectedTeacherId] = useState<string>(teachers[0]?.id || 'Nương');
+  const [roleFilter, setRoleFilter] = useState<'all' | 'SPECIALIST' | 'GVCN'>('all');
+
+  const selectedTeacher = teachers.find(t => t.id === selectedTeacherId || t.name === selectedTeacherId) || teachers[0];
   const isSpecialist = selectedTeacher.role === 'SPECIALIST';
 
-  const filteredTeachers = ALL_TEACHERS.filter(t => {
+  const filteredTeachers = teachers.filter(t => {
     if (roleFilter === 'all') return true;
     return t.role === roleFilter;
   });
@@ -36,7 +44,7 @@ export const TeacherScheduleView: React.FC<TeacherScheduleViewProps> = ({ schedu
   let diem1Periods = 0;
   let diem2Periods = 0;
 
-  for (const c of ALL_CLASSES) {
+  for (const c of classes) {
     for (const slot of TIME_SLOTS) {
       const lesson = schedule[c.id]?.[slot.id];
       if (lesson && lesson.teacherName === selectedTeacher.name) {

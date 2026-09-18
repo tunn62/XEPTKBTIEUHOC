@@ -1,10 +1,19 @@
 import ExcelJS from 'exceljs';
 import { ALL_CLASSES, SCHOOL_INFO, TIME_SLOTS } from '../data/initialData';
-import { ScheduleMatrix } from '../types';
+import { ScheduleMatrix, SchoolProfile } from '../types';
 
-export async function exportScheduleToExcel(schedule: ScheduleMatrix, filename = 'TKB_TieuHocTanThanh_A4.xlsx') {
+export async function exportScheduleToExcel(
+  schedule: ScheduleMatrix,
+  filename = 'TKB_TieuHoc_A4.xlsx',
+  schoolProfile?: SchoolProfile
+) {
   const wb = new ExcelJS.Workbook();
-  wb.creator = 'Hệ thống CSP Tiểu học Tân Thạnh';
+  const schoolName = schoolProfile?.name || SCHOOL_INFO.name;
+  const schoolBranch = schoolProfile?.branch || SCHOOL_INFO.branch;
+  const academicYear = schoolProfile?.academicYear || SCHOOL_INFO.academicYear;
+  const classes = schoolProfile?.classes || ALL_CLASSES;
+
+  wb.creator = `Hệ thống TKB - ${schoolName}`;
   wb.lastModifiedBy = 'Chuyên gia GD & Kỹ sư Tối ưu hóa CSP';
   wb.created = new Date();
 
@@ -51,42 +60,33 @@ export async function exportScheduleToExcel(schedule: ScheduleMatrix, filename =
     },
   });
 
+  const lastColLetter = String.fromCharCode(65 + 3 + classes.length - 1);
+
   // Row 1: School Header
-  ws.mergeCells('A1:M1');
+  ws.mergeCells(`A1:${lastColLetter}1`);
   const title1 = ws.getCell('A1');
-  title1.value = `${SCHOOL_INFO.name} - ${SCHOOL_INFO.branch}`;
+  title1.value = `${schoolName} - ${schoolBranch}`;
   title1.font = { name: 'Arial', size: 11, bold: true, color: { argb: 'FF1E3A8A' } };
   title1.alignment = { horizontal: 'center', vertical: 'middle' };
 
   // Row 2: Subtitle
-  ws.mergeCells('A2:M2');
+  ws.mergeCells(`A2:${lastColLetter}2`);
   const title2 = ws.getCell('A2');
-  title2.value = `THỜI KHÓA BIỂU NĂM HỌC ${SCHOOL_INFO.academicYear}`;
+  title2.value = `THỜI KHÓA BIỂU NĂM HỌC ${academicYear}`;
   title2.font = { name: 'Arial', size: 14, bold: true, color: { argb: 'FFB91C1C' } };
   title2.alignment = { horizontal: 'center', vertical: 'middle' };
 
   // Row 3: Meta info
-  ws.mergeCells('A3:M3');
+  ws.mergeCells(`A3:${lastColLetter}3`);
   const meta = ws.getCell('A3');
   meta.value = `Áp dụng chương trình GDPT 2018 | Khung thời gian: 32 tiết/tuần | Giải pháp: Google OR-Tools CP-SAT`;
   meta.font = { name: 'Arial', size: 9, italic: true, color: { argb: 'FF64748B' } };
   meta.alignment = { horizontal: 'center', vertical: 'middle' };
 
-  // Header Row 4: Campus split headers
+  // Header Row 4: Column headers
   ws.getCell('A4').value = 'THỜI GIAN';
   ws.getCell('B4').value = 'BUỔI';
   ws.getCell('C4').value = 'TIẾT';
-  ws.mergeCells('D4:H4');
-  ws.getCell('D4').value = 'ĐIỂM TRƯỜNG CHÍNH (ĐIỂM 1 - CÁC LỚP A)';
-  ws.getCell('D4').font = { name: 'Arial', size: 10, bold: true, color: { argb: 'FF1E40AF' } };
-  ws.getCell('D4').alignment = { horizontal: 'center', vertical: 'middle' };
-  ws.getCell('D4').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFDBEAFE' } };
-
-  ws.mergeCells('I4:M4');
-  ws.getCell('I4').value = 'PHÂN HIỆU TÂN BÌNH (ĐIỂM 2 - CÁC LỚP B)';
-  ws.getCell('I4').font = { name: 'Arial', size: 10, bold: true, color: { argb: 'FF991B1B' } };
-  ws.getCell('I4').alignment = { horizontal: 'center', vertical: 'middle' };
-  ws.getCell('I4').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFEE2E2' } };
 
   // Header Row 5: Class columns
   const headerRow = ws.getRow(5);
@@ -94,16 +94,7 @@ export async function exportScheduleToExcel(schedule: ScheduleMatrix, filename =
     'Thứ',
     'Buổi',
     'Tiết',
-    '1A (Chi)',
-    '2A (Trang)',
-    '3A (Dương)',
-    '4A (Hằng)',
-    '5A (Tuấn)',
-    '1B (Bé Năm)',
-    '2B (Chinh)',
-    '3B (Đạt)',
-    '4B (Yến)',
-    '5B (Huế)',
+    ...classes.map(c => `${c.name || c.id} (${c.gvcn || 'GVCN'})`),
   ];
 
   headerRow.eachCell((cell, colNumber) => {
@@ -112,7 +103,7 @@ export async function exportScheduleToExcel(schedule: ScheduleMatrix, filename =
     cell.fill = {
       type: 'pattern',
       pattern: 'solid',
-      fgColor: { argb: colNumber <= 3 ? 'FF334155' : colNumber <= 8 ? 'FF1E40AF' : 'FF991B1B' },
+      fgColor: { argb: colNumber <= 3 ? 'FF334155' : 'FF1E40AF' },
     };
     cell.border = {
       top: { style: 'thin' },
@@ -138,7 +129,7 @@ export async function exportScheduleToExcel(schedule: ScheduleMatrix, filename =
         `Tiết ${slot.period}`,
       ];
 
-      for (const c of ALL_CLASSES) {
+      for (const c of classes) {
         const lesson = schedule[c.id]?.[slot.id];
         if (lesson) {
           rowValues.push(`${lesson.subjectName}\n(${lesson.teacherName})`);
@@ -163,8 +154,8 @@ export async function exportScheduleToExcel(schedule: ScheduleMatrix, filename =
 
         if (colNumber > 3) {
           const classIdx = colNumber - 4;
-          const classObj = ALL_CLASSES[classIdx];
-          const lesson = schedule[classObj.id]?.[slot.id];
+          const classObj = classes[classIdx];
+          const lesson = schedule[classObj?.id]?.[slot.id];
           if (lesson) {
             const colors = getSubjectColor(lesson.subjectCode, lesson.category);
             cell.fill = {
