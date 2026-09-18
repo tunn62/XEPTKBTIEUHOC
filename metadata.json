@@ -1,0 +1,6 @@
+{
+  "name": "Xếp Thời Khóa Biểu Tự Động - Tiểu Học Tân Thạnh",
+  "description": "Hệ thống xếp thời khóa biểu tự động tối ưu hóa CSP cho Trường Tiểu học Tân Thạnh (Phân hiệu Tân Bình) Năm học 2026 - 2027 với xuất Excel chuẩn A4.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

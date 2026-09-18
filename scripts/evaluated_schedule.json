@@ -1,0 +1,1302 @@
+{
+  "1A": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Chi"
+    },
+    "T2_S_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T2_S_3": {
+      "subjectCode": "TV",
+      "teacherName": "Chi"
+    },
+    "T2_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chi"
+    },
+    "T2_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chi"
+    },
+    "T2_C_2": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T2_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Chi"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chi"
+    },
+    "T3_S_2": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T3_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chi"
+    },
+    "T3_S_4": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T3_C_1": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T3_C_2": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T3_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chi"
+    },
+    "T4_S_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T4_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chi"
+    },
+    "T4_S_4": {
+      "subjectCode": "TNXH",
+      "teacherName": "Chi"
+    },
+    "T4_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chi"
+    },
+    "T4_C_2": {
+      "subjectCode": "TC_TOAN",
+      "teacherName": "Chi"
+    },
+    "T4_C_3": {
+      "subjectCode": "DD",
+      "teacherName": "Chi"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chi"
+    },
+    "T5_S_2": {
+      "subjectCode": "TNXH",
+      "teacherName": "Chi"
+    },
+    "T5_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chi"
+    },
+    "T5_S_4": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T5_C_1": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T5_C_2": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T5_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Quan"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chi"
+    },
+    "T6_S_2": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chi"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Chi"
+    }
+  },
+  "2A": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Trang"
+    },
+    "T2_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Trang"
+    },
+    "T2_S_3": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T2_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Trang"
+    },
+    "T2_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Trang"
+    },
+    "T2_C_2": {
+      "subjectCode": "TV",
+      "teacherName": "Trang"
+    },
+    "T2_C_3": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Trang"
+    },
+    "T3_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Trang"
+    },
+    "T3_S_3": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T3_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Trang"
+    },
+    "T3_C_1": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T3_C_2": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T3_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Trang"
+    },
+    "T4_S_2": {
+      "subjectCode": "TOAN",
+      "teacherName": "Trang"
+    },
+    "T4_S_3": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T4_S_4": {
+      "subjectCode": "TNXH",
+      "teacherName": "Trang"
+    },
+    "T4_C_1": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T4_C_2": {
+      "subjectCode": "TC_TV",
+      "teacherName": "Quan"
+    },
+    "T4_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Quan"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Trang"
+    },
+    "T5_S_2": {
+      "subjectCode": "TNXH",
+      "teacherName": "Trang"
+    },
+    "T5_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Trang"
+    },
+    "T5_S_4": {
+      "subjectCode": "TC",
+      "teacherName": "Quan"
+    },
+    "T5_C_1": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T5_C_2": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T5_C_3": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Trang"
+    },
+    "T6_S_2": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Trang"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Trang"
+    }
+  },
+  "3A": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Dương"
+    },
+    "T2_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Dương"
+    },
+    "T2_S_3": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T2_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Dương"
+    },
+    "T2_C_1": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T2_C_2": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T2_C_3": {
+      "subjectCode": "HDTN_CD",
+      "teacherName": "Thy"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Dương"
+    },
+    "T3_S_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T3_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Dương"
+    },
+    "T3_S_4": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T3_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Dương"
+    },
+    "T3_C_2": {
+      "subjectCode": "TC_TV",
+      "teacherName": "Dương"
+    },
+    "T3_C_3": {
+      "subjectCode": "TNXH",
+      "teacherName": "Dương"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Dương"
+    },
+    "T4_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Dương"
+    },
+    "T4_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Dương"
+    },
+    "T4_S_4": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T4_C_1": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T4_C_2": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T4_C_3": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Dương"
+    },
+    "T5_S_2": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T5_S_3": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T5_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Dương"
+    },
+    "T5_C_1": {
+      "subjectCode": "DD",
+      "teacherName": "Dương"
+    },
+    "T5_C_2": {
+      "subjectCode": "TNXH",
+      "teacherName": "Dương"
+    },
+    "T5_C_3": {
+      "subjectCode": "TC_TOAN",
+      "teacherName": "Dương"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Dương"
+    },
+    "T6_S_2": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Dương"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Dương"
+    }
+  },
+  "4A": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Hằng"
+    },
+    "T2_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Hằng"
+    },
+    "T2_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Hằng"
+    },
+    "T2_S_4": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T2_C_1": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T2_C_2": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T2_C_3": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Hằng"
+    },
+    "T3_S_2": {
+      "subjectCode": "TOAN",
+      "teacherName": "Hằng"
+    },
+    "T3_S_3": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T3_S_4": {
+      "subjectCode": "KH",
+      "teacherName": "Hằng"
+    },
+    "T3_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Hằng"
+    },
+    "T3_C_2": {
+      "subjectCode": "LS_DL",
+      "teacherName": "Hằng"
+    },
+    "T3_C_3": {
+      "subjectCode": "DD",
+      "teacherName": "Hằng"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Hằng"
+    },
+    "T4_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Hằng"
+    },
+    "T4_S_3": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T4_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Hằng"
+    },
+    "T4_C_1": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T4_C_2": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T4_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Hằng"
+    },
+    "T5_S_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T5_S_3": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T5_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Hằng"
+    },
+    "T5_C_1": {
+      "subjectCode": "KH",
+      "teacherName": "Hằng"
+    },
+    "T5_C_2": {
+      "subjectCode": "LS_DL",
+      "teacherName": "Hằng"
+    },
+    "T5_C_3": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Hằng"
+    },
+    "T6_S_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Hằng"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Hằng"
+    }
+  },
+  "5A": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Tuấn"
+    },
+    "T2_S_2": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T2_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Tuấn"
+    },
+    "T2_S_4": {
+      "subjectCode": "TV",
+      "teacherName": "Tuấn"
+    },
+    "T2_C_1": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T2_C_2": {
+      "subjectCode": "HDTN_CD",
+      "teacherName": "Thy"
+    },
+    "T2_C_3": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Tuấn"
+    },
+    "T3_S_2": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T3_S_3": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T3_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Tuấn"
+    },
+    "T3_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Tuấn"
+    },
+    "T3_C_2": {
+      "subjectCode": "LS_DL",
+      "teacherName": "Tuấn"
+    },
+    "T3_C_3": {
+      "subjectCode": "TC_TOAN",
+      "teacherName": "Tuấn"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Tuấn"
+    },
+    "T4_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Tuấn"
+    },
+    "T4_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Tuấn"
+    },
+    "T4_S_4": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T4_C_3": {
+      "subjectCode": "KH",
+      "teacherName": "Tuấn"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Tuấn"
+    },
+    "T5_S_2": {
+      "subjectCode": "TOAN",
+      "teacherName": "Tuấn"
+    },
+    "T5_S_3": {
+      "subjectCode": "KH",
+      "teacherName": "Tuấn"
+    },
+    "T5_S_4": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T5_C_1": {
+      "subjectCode": "LS_DL",
+      "teacherName": "Tuấn"
+    },
+    "T5_C_2": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T5_C_3": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Tuấn"
+    },
+    "T6_S_2": {
+      "subjectCode": "TC",
+      "teacherName": "Phước"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Tuấn"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Tuấn"
+    },
+    "T4_C_1": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T4_C_2": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    }
+  },
+  "1B": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Bé Năm"
+    },
+    "T2_S_2": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T2_S_3": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T2_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Bé Năm"
+    },
+    "T2_C_1": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T2_C_2": {
+      "subjectCode": "HDTN_CD",
+      "teacherName": "Nhàn"
+    },
+    "T2_C_3": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T3_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T3_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Bé Năm"
+    },
+    "T3_S_4": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T3_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T3_C_2": {
+      "subjectCode": "TC_TOAN",
+      "teacherName": "Bé Năm"
+    },
+    "T3_C_3": {
+      "subjectCode": "DD",
+      "teacherName": "Bé Năm"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T4_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T4_S_3": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T4_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Bé Năm"
+    },
+    "T4_C_1": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T4_C_2": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T4_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T5_S_2": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T5_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Bé Năm"
+    },
+    "T5_S_4": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T5_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T5_C_2": {
+      "subjectCode": "TNXH",
+      "teacherName": "Nhàn"
+    },
+    "T5_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Bé Năm"
+    },
+    "T6_S_2": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Bé Năm"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Bé Năm"
+    }
+  },
+  "2B": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Chinh"
+    },
+    "T2_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Chinh"
+    },
+    "T2_S_3": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T2_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chinh"
+    },
+    "T2_C_1": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T2_C_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T2_C_3": {
+      "subjectCode": "HDTN_CD",
+      "teacherName": "Nhàn"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chinh"
+    },
+    "T3_S_2": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T3_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chinh"
+    },
+    "T3_S_4": {
+      "subjectCode": "TNXH",
+      "teacherName": "Chinh"
+    },
+    "T3_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chinh"
+    },
+    "T3_C_2": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T3_C_3": {
+      "subjectCode": "DD",
+      "teacherName": "Chinh"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chinh"
+    },
+    "T4_S_2": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T4_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chinh"
+    },
+    "T4_S_4": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T4_C_1": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T4_C_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T4_C_3": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chinh"
+    },
+    "T5_S_2": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T5_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chinh"
+    },
+    "T5_S_4": {
+      "subjectCode": "TC_TOAN",
+      "teacherName": "Chinh"
+    },
+    "T5_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chinh"
+    },
+    "T5_C_2": {
+      "subjectCode": "TC_TV",
+      "teacherName": "Chinh"
+    },
+    "T5_C_3": {
+      "subjectCode": "TNXH",
+      "teacherName": "Chinh"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Chinh"
+    },
+    "T6_S_2": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Chinh"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Chinh"
+    }
+  },
+  "3B": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Đạt"
+    },
+    "T2_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Đạt"
+    },
+    "T2_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Đạt"
+    },
+    "T2_S_4": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T2_C_1": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T2_C_2": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T2_C_3": {
+      "subjectCode": "TV",
+      "teacherName": "Đạt"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Đạt"
+    },
+    "T3_S_2": {
+      "subjectCode": "TNXH",
+      "teacherName": "Đạt"
+    },
+    "T3_S_3": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T3_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Đạt"
+    },
+    "T3_C_1": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T3_C_2": {
+      "subjectCode": "HDTN_CD",
+      "teacherName": "Nhàn"
+    },
+    "T3_C_3": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Đạt"
+    },
+    "T4_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Đạt"
+    },
+    "T4_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Đạt"
+    },
+    "T4_S_4": {
+      "subjectCode": "TNXH",
+      "teacherName": "Đạt"
+    },
+    "T4_C_1": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T4_C_2": {
+      "subjectCode": "TC_TV",
+      "teacherName": "Đạt"
+    },
+    "T4_C_3": {
+      "subjectCode": "TC_TOAN",
+      "teacherName": "Đạt"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Đạt"
+    },
+    "T5_S_2": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T5_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Đạt"
+    },
+    "T5_S_4": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T5_C_1": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T5_C_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T5_C_3": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Đạt"
+    },
+    "T6_S_2": {
+      "subjectCode": "DD",
+      "teacherName": "Đạt"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Đạt"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Đạt"
+    }
+  },
+  "4B": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Yến"
+    },
+    "T2_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Yến"
+    },
+    "T2_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Yến"
+    },
+    "T2_S_4": {
+      "subjectCode": "KH",
+      "teacherName": "Yến"
+    },
+    "T2_C_1": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T2_C_2": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T2_C_3": {
+      "subjectCode": "TV",
+      "teacherName": "Yến"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Yến"
+    },
+    "T3_S_2": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T3_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Yến"
+    },
+    "T3_S_4": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T3_C_1": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T3_C_2": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T3_C_3": {
+      "subjectCode": "HDTN_CD",
+      "teacherName": "Nhàn"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Yến"
+    },
+    "T4_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Yến"
+    },
+    "T4_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Yến"
+    },
+    "T4_S_4": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T4_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Yến"
+    },
+    "T4_C_2": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T4_C_3": {
+      "subjectCode": "TC_TOAN",
+      "teacherName": "Yến"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Yến"
+    },
+    "T5_S_2": {
+      "subjectCode": "KH",
+      "teacherName": "Yến"
+    },
+    "T5_S_3": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T5_S_4": {
+      "subjectCode": "TOAN",
+      "teacherName": "Yến"
+    },
+    "T5_C_1": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T5_C_2": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T5_C_3": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Yến"
+    },
+    "T6_S_2": {
+      "subjectCode": "LS_DL",
+      "teacherName": "Yến"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Yến"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Yến"
+    }
+  },
+  "5B": {
+    "T2_S_1": {
+      "subjectCode": "SHDC",
+      "teacherName": "Huế"
+    },
+    "T2_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T2_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Huế"
+    },
+    "T2_S_4": {
+      "subjectCode": "KH",
+      "teacherName": "Huế"
+    },
+    "T2_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T2_C_2": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T2_C_3": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T3_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T3_S_2": {
+      "subjectCode": "TOAN",
+      "teacherName": "Huế"
+    },
+    "T3_S_3": {
+      "subjectCode": "TH",
+      "teacherName": "Phương"
+    },
+    "T3_S_4": {
+      "subjectCode": "MT",
+      "teacherName": "Thy"
+    },
+    "T3_C_1": {
+      "subjectCode": "HDTN_CD",
+      "teacherName": "Nhàn"
+    },
+    "T3_C_2": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T3_C_3": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T4_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T4_S_2": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T4_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Huế"
+    },
+    "T4_S_4": {
+      "subjectCode": "LS_DL",
+      "teacherName": "Nhàn"
+    },
+    "T4_C_1": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T4_C_2": {
+      "subjectCode": "LS_DL",
+      "teacherName": "Huế"
+    },
+    "T4_C_3": {
+      "subjectCode": "TC",
+      "teacherName": "Nhàn"
+    },
+    "T5_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T5_S_2": {
+      "subjectCode": "TOAN",
+      "teacherName": "Huế"
+    },
+    "T5_S_3": {
+      "subjectCode": "AN",
+      "teacherName": "Tâm"
+    },
+    "T5_S_4": {
+      "subjectCode": "BD_MT",
+      "teacherName": "Thy"
+    },
+    "T5_C_1": {
+      "subjectCode": "GDTC",
+      "teacherName": "Thịnh"
+    },
+    "T5_C_2": {
+      "subjectCode": "BD_AN",
+      "teacherName": "Tâm"
+    },
+    "T5_C_3": {
+      "subjectCode": "TA",
+      "teacherName": "Nương"
+    },
+    "T6_S_1": {
+      "subjectCode": "TV",
+      "teacherName": "Huế"
+    },
+    "T6_S_2": {
+      "subjectCode": "DD",
+      "teacherName": "Huế"
+    },
+    "T6_S_3": {
+      "subjectCode": "TOAN",
+      "teacherName": "Huế"
+    },
+    "T6_S_4": {
+      "subjectCode": "SHL",
+      "teacherName": "Huế"
+    }
+  }
+}

@@ -1,0 +1,1066 @@
+[
+  {
+    "classId": "1A",
+    "slotId": "T2_S_2",
+    "day": 2,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T2_C_2",
+    "day": 2,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T3_S_2",
+    "day": 3,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T3_S_4",
+    "day": 3,
+    "session": "S",
+    "period": 4,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T3_C_1",
+    "day": 3,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T3_C_2",
+    "day": 3,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T3_C_3",
+    "day": 3,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T4_S_2",
+    "day": 4,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T5_S_4",
+    "day": 5,
+    "session": "S",
+    "period": 4,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T5_C_1",
+    "day": 5,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T5_C_2",
+    "day": 5,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T5_C_3",
+    "day": 5,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1A",
+    "slotId": "T6_S_2",
+    "day": 6,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T2_S_3",
+    "day": 2,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T2_C_3",
+    "day": 2,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T3_S_3",
+    "day": 3,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T3_C_1",
+    "day": 3,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T3_C_2",
+    "day": 3,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T3_C_3",
+    "day": 3,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T4_S_3",
+    "day": 4,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T4_C_1",
+    "day": 4,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T4_C_2",
+    "day": 4,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T4_C_3",
+    "day": 4,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T5_S_4",
+    "day": 5,
+    "session": "S",
+    "period": 4,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T5_C_1",
+    "day": 5,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T5_C_2",
+    "day": 5,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T5_C_3",
+    "day": 5,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "2A",
+    "slotId": "T6_S_2",
+    "day": 6,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T2_S_3",
+    "day": 2,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T2_C_1",
+    "day": 2,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T2_C_2",
+    "day": 2,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T2_C_3",
+    "day": 2,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T3_S_2",
+    "day": 3,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T3_S_4",
+    "day": 3,
+    "session": "S",
+    "period": 4,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T4_S_4",
+    "day": 4,
+    "session": "S",
+    "period": 4,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T4_C_1",
+    "day": 4,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T4_C_2",
+    "day": 4,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T4_C_3",
+    "day": 4,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T5_S_2",
+    "day": 5,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T5_S_3",
+    "day": 5,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "3A",
+    "slotId": "T6_S_2",
+    "day": 6,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T2_S_4",
+    "day": 2,
+    "session": "S",
+    "period": 4,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T2_C_1",
+    "day": 2,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T2_C_2",
+    "day": 2,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T2_C_3",
+    "day": 2,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T3_S_3",
+    "day": 3,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T4_S_3",
+    "day": 4,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T4_C_1",
+    "day": 4,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T4_C_2",
+    "day": 4,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T4_C_3",
+    "day": 4,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T5_S_2",
+    "day": 5,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T5_S_3",
+    "day": 5,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T5_C_3",
+    "day": 5,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "4A",
+    "slotId": "T6_S_2",
+    "day": 6,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T2_S_2",
+    "day": 2,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T2_C_1",
+    "day": 2,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T2_C_2",
+    "day": 2,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T2_C_3",
+    "day": 2,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T3_S_2",
+    "day": 3,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T3_S_3",
+    "day": 3,
+    "session": "S",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T4_C_1",
+    "day": 4,
+    "session": "C",
+    "period": 1,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T4_C_2",
+    "day": 4,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T4_C_3",
+    "day": 4,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T5_S_4",
+    "day": 5,
+    "session": "S",
+    "period": 4,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T5_C_2",
+    "day": 5,
+    "session": "C",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T5_C_3",
+    "day": 5,
+    "session": "C",
+    "period": 3,
+    "campus": "diem1"
+  },
+  {
+    "classId": "5A",
+    "slotId": "T6_S_2",
+    "day": 6,
+    "session": "S",
+    "period": 2,
+    "campus": "diem1"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T2_S_2",
+    "day": 2,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T2_C_1",
+    "day": 2,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T2_C_2",
+    "day": 2,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T2_C_3",
+    "day": 2,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T3_S_4",
+    "day": 3,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T4_S_3",
+    "day": 4,
+    "session": "S",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T4_C_1",
+    "day": 4,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T4_C_2",
+    "day": 4,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T4_C_3",
+    "day": 4,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T5_S_2",
+    "day": 5,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T5_S_4",
+    "day": 5,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T5_C_2",
+    "day": 5,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T5_C_3",
+    "day": 5,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "1B",
+    "slotId": "T6_S_2",
+    "day": 6,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T2_S_3",
+    "day": 2,
+    "session": "S",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T2_C_1",
+    "day": 2,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T2_C_2",
+    "day": 2,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T2_C_3",
+    "day": 2,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T3_S_2",
+    "day": 3,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T3_C_2",
+    "day": 3,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T4_S_2",
+    "day": 4,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T4_S_4",
+    "day": 4,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T4_C_1",
+    "day": 4,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T4_C_2",
+    "day": 4,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T4_C_3",
+    "day": 4,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T5_S_2",
+    "day": 5,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "2B",
+    "slotId": "T6_S_2",
+    "day": 6,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T2_S_4",
+    "day": 2,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T2_C_1",
+    "day": 2,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T2_C_2",
+    "day": 2,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T3_S_3",
+    "day": 3,
+    "session": "S",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T3_C_1",
+    "day": 3,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T3_C_2",
+    "day": 3,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T3_C_3",
+    "day": 3,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T4_C_1",
+    "day": 4,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T5_S_2",
+    "day": 5,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T5_S_4",
+    "day": 5,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T5_C_1",
+    "day": 5,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T5_C_2",
+    "day": 5,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "3B",
+    "slotId": "T5_C_3",
+    "day": 5,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T2_C_1",
+    "day": 2,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T2_C_2",
+    "day": 2,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T3_S_2",
+    "day": 3,
+    "session": "S",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T3_S_4",
+    "day": 3,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T3_C_1",
+    "day": 3,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T3_C_2",
+    "day": 3,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T3_C_3",
+    "day": 3,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T4_S_4",
+    "day": 4,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T4_C_2",
+    "day": 4,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T5_S_3",
+    "day": 5,
+    "session": "S",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T5_C_1",
+    "day": 5,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T5_C_2",
+    "day": 5,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "4B",
+    "slotId": "T5_C_3",
+    "day": 5,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T2_C_3",
+    "day": 2,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T3_S_3",
+    "day": 3,
+    "session": "S",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T3_S_4",
+    "day": 3,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T3_C_1",
+    "day": 3,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T3_C_2",
+    "day": 3,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T3_C_3",
+    "day": 3,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T4_S_4",
+    "day": 4,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T4_C_3",
+    "day": 4,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T5_S_3",
+    "day": 5,
+    "session": "S",
+    "period": 3,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T5_S_4",
+    "day": 5,
+    "session": "S",
+    "period": 4,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T5_C_1",
+    "day": 5,
+    "session": "C",
+    "period": 1,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T5_C_2",
+    "day": 5,
+    "session": "C",
+    "period": 2,
+    "campus": "diem2"
+  },
+  {
+    "classId": "5B",
+    "slotId": "T5_C_3",
+    "day": 5,
+    "session": "C",
+    "period": 3,
+    "campus": "diem2"
+  }
+]
